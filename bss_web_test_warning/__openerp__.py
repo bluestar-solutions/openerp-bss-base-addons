@@ -32,6 +32,7 @@
     "css": ['static/src/css/test_warning.css'],
     'auto_install': False,
     'web_preload': False,
+    'images' : ['images/web_test_warning.png',],
 }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
