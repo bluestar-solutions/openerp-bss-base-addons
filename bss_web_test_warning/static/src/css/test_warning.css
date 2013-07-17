@@ -14,7 +14,7 @@
 .openerp a.oe_logo {
 	background-image: url(../img/logo-test.png);
 	background-repeat: no-repeat;
-	background-position: center; 
+	background-position: top-left; 
 	background-color: yellow;
 	height: 120px;
 	width: auto;
