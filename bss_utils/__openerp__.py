@@ -21,11 +21,11 @@
 
 {
     'name': 'Utils',
-    'version': 'master',
+    'version': '7.0.2.0',
     "category" : 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """A module with python tools.""",
-    'author': 'bluestar solutions sàrl',
+    'author': 'Bluestar Solutions Sàrl',
     'website': 'http://www.blues2.ch',
     'depends': [],
     'init_xml': [],

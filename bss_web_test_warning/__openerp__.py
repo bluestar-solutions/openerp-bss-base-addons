@@ -21,11 +21,11 @@
 
 {
     'name': 'Test Warning',
-    'version': 'master',
+    'version': '7.0.2.0',
     "category" : 'Bluestar/Generic web module',
     'complexity': "easy",
     'description': """Test Warning""",
-    'author': 'bluestar solutions sàrl',
+    'author': 'Bluestar Solutions Sàrl',
     'website': 'http://www.blues2.ch',
     'depends': ['web'],
     "js": [],
