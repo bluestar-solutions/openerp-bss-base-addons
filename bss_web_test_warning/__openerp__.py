@@ -24,7 +24,12 @@
     'version': 'master',
     "category" : 'Bluestar/Generic web module',
     'complexity': "easy",
-    'description': """Test Warning""",
+    'description': """
+Warning style for staging/testing install
+=========================================
+
+Flashy look and feel for OpenERP web interface to not mix up your production instance with your staging/testing instance.
+    """,
     'author': 'Bluestar Solutions Sàrl',
     'website': 'http://www.blues2.ch',
     'depends': ['web'],
@@ -32,6 +37,7 @@
     "css": ['static/src/css/test_warning.css'],
     'auto_install': False,
     'web_preload': False,
+    'images' : ['images/web_test_warning.png',],
 }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
