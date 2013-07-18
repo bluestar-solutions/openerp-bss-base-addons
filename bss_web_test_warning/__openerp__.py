@@ -24,7 +24,12 @@
     'version': '7.0.2.0',
     "category" : 'Bluestar/Generic web module',
     'complexity': "easy",
-    'description': """Test Warning""",
+    'description': """
+Warning style for staging/testing install
+=========================================
+
+Flashy look and feel for OpenERP web interface to not mix up your production instance with your staging/testing instance.
+    """,
     'author': 'Bluestar Solutions Sàrl',
     'website': 'http://www.blues2.ch',
     'depends': ['web'],

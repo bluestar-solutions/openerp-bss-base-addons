@@ -24,7 +24,12 @@
     'version': '7.0.2.0',
     "category" : 'Bluestar/Generic module',
     'complexity': "easy",
-    'description': """A module with python tools.""",
+    'description': """
+OpenERP Python Utilities
+========================
+
+A set of useful generic Python methods for OpenERP (amountutils, dateutils, ...).
+    """,
     'author': 'Bluestar Solutions Sàrl',
     'website': 'http://www.blues2.ch',
     'depends': [],
