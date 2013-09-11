@@ -29,7 +29,7 @@ A widget for durations including parsing and validation
     """,
     'author': 'Bluestar Solutions Sàrl',
     'website': 'http://www.blues2.ch',
-    'depends': [],
+    'depends': ['base'],
     'init_xml': [],
     'update_xml': [],
     'css': [],
