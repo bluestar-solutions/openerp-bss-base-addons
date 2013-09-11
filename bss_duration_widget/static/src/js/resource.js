@@ -1,11 +1,10 @@
-openerp.resource = function(instance)
+openerp.duration = function(instance)
 {
 	console.log("Module loaded");
 	
-	openerp.web.form.widgets.add('duration', 'openerp.resource.duration_widget');
-	openerp.resource.duration_widget = openerp.web.form.FieldChar.extend(
+	instance.duration.FieldDuration = instance.web.form.FieldChar.extend(
 	    {
-	    	template : "duration",
+	    	template : "FieldDuration",
 	    	init: function (view, code)
 	    	{
 	    		this._super(view, code);
@@ -22,4 +21,6 @@ openerp.resource = function(instance)
 	    			});
 	    	}
 	    });
+	    
+	instance.web.form.widgets.add('duration', 'instance.duration.FieldDuration');
 }
