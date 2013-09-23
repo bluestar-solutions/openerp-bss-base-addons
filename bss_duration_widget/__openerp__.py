@@ -34,7 +34,6 @@ A widget for durations including parsing and validation
     'update_xml': [],
     'css': [],
     'js': ['static/src/js/resource.js'],
-    'qweb': ['static/src/xml/resource.xml'],
     'demo_xml': [],
     'test': [],
     'installable': True,

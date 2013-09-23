@@ -22,38 +22,55 @@
 from openerp.osv import fields, osv
 from openerp.netsvc import logging
 from datetime import datetime, timedelta
+from math import floor
 from re import match
 
-class bss_parser(osv.TransientModel):
-    _name = "bss_duration_widget.bss_parser"
-    _description = "Parser and validator for duration"
+CONVERSIONS = {
+               'w': lambda x: float(x)*5.0,     # week(s) in days
+               'd': lambda x: float(x),         # day(s) in days
+               'h': lambda x: float(x)/24.0     # hour(s) in days
+               }
 
-    def _validate_str(self, str_to_validate):
-        rex = r'^[0-9]{1,}d$|^[0-9]{1,}h?$|^[0-9]{1,}d\ [0-9]{1,2}h$'
-        
-        return match(rex, str_to_validate) is not None
-
-    def parse_str(self, str_to_parse):
-        if not self._validate_str(str_to_parse):
-            raise osv.except_osv("Validation error", "String duration is not valid !")
-        
-        td = timedelta()
-        elements = str_to_parse.split(' ')
+class duration(fields.float):
+    _type = 'duration'
+    _symbol_c = '%s'
+    _symbol_f = lambda x: duration.parse_value(x)
+    _symbol_set = (_symbol_c,_symbol_f)
+    
+    @staticmethod
+    def validate_str(str_to_validate):
+        pattern = r'^\d{1,}%s$'
+        elements = str_to_validate.split(' ')
+        result = True
         
         for element in elements:
-            if element[-1] == 'd':
-                td += timedelta(days=element[:-1])
-            elif element[-1] == 'h':
-                td += timedelta(hours=element[:-1])
+            tmp = False
+            for conv in CONVERSIONS.iterkeys():
+                tmp = tmp or (match(pattern % conv,element) is not None)
+            result = result and tmp 
         
-        return td.total_seconds()
+        return result
+    
+    @staticmethod    
+    def parse_value(vals):
+        if not duration.validate_str(vals):
+            raise osv.except_osv("Validation error", "String duration is not valid !")
+        
+        total = float(0.0)
+        elements = vals.split(' ')
+        
+        for element in elements:
+            total += CONVERSIONS[element[-1]](element[:-1])
+        
+        return total
+    
+    def __init__(self, string="unknown", **args):
+        fields.float.__init__(self, string=string, **args)
 
-    def display_value(self, value_to_display):
-        print("Calling display_value")
-        if type(value_to_display) in [str,int]:
-            value_to_display = float(value_to_display)
-        elif type(value_to_display) == datetime:
-            value_to_display = float((value_to_display-datetime(1970,1,1)).total_seconds())
+    def _symbol_get(self, value_to_display):
+        days = int(floor(value_to_display))
+        hours = int((value_to_display - days)*24)
         
-        return "%sd %sh" % (int(value_to_display//(60.0*60.0*24.0)),int(value_to_display%(60.0*60.0*24.0)))
-bss_parser()
+        return "%sd %sh" % (days, hours)
+
+fields.duration = duration
