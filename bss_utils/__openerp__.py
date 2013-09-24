@@ -35,7 +35,7 @@ A set of useful generic Python methods for OpenERP (amountutils, dateutils, ...)
     'depends': [],
     'init_xml': [],
     'update_xml': [],
-    'css': [],
+    'css': ['static/src/css/style.css'],
     'demo_xml': [],
     'test': ['test/test_amountutils.yml'],
     'installable': True,
