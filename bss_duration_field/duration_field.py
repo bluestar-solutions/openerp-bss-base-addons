@@ -31,6 +31,8 @@ CONVERSIONS = {
                'h': lambda x: float(x)/24.0     # hour(s) in days
                }
 
+PATTERNS = None
+
 class duration(fields.float):
     _type = 'duration'
     _symbol_c = '%s'
@@ -38,18 +40,27 @@ class duration(fields.float):
     _symbol_set = (_symbol_c,_symbol_f)
     
     @staticmethod
-    def validate_str(str_to_validate):
+    def init_patterns():
+        PATTERNS = ""
         pattern = r'^\d{1,}%s$'
-        elements = str_to_validate.split(' ')
-        result = True
         
-        for element in elements:
-            tmp = False
-            for conv in CONVERSIONS.iterkeys():
-                tmp = tmp or (match(pattern % conv,element) is not None)
-            result = result and tmp 
+        conv_keys = CONVERSIONS.viewkeys()
         
-        return result
+        while(len(conv_keys) > 0):
+            PATTERNS += (pattern % conv_keys.pop())
+            if len(conv_keys) > 0:
+                PATTERNS += "|"
+    
+    @staticmethod
+    def validate_str(str_to_validate):
+        if PATTERNS is None:
+            duration.init_patterns()
+        
+        for element in str_to_validate.split(' '):
+            if match(PATTERNS,element) is None:
+                return False
+        
+        return True
     
     @staticmethod    
     def parse_value(vals):
@@ -57,9 +68,8 @@ class duration(fields.float):
             raise osv.except_osv("Validation error", "String duration is not valid !")
         
         total = float(0.0)
-        elements = vals.split(' ')
         
-        for element in elements:
+        for element in vals.split(' '):
             total += CONVERSIONS[element[-1]](element[:-1])
         
         return total
