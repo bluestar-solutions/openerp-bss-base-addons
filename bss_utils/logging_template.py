@@ -19,7 +19,10 @@
 #
 ##############################################################################
 
+from openerp.addons.bss_utils.decorator import deprecated  # @UnresolvedImport
 
+
+@deprecated
 def log_debug_trigger(logger, update_object, ids, trigger_object):
     logger.debug(
         "Update %(update_object)s%(ids)s triggered by "
