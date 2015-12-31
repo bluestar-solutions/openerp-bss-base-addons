@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
-#    
+#
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2012-2013 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
+#    Copyright (C) 2012-2015 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -15,20 +15,21 @@
 #    GNU Affero General Public License for more details.
 #
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.     
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
 
 {
     'name': 'Test Warning',
     'version': 'master',
-    "category" : 'Bluestar/Generic web module',
+    "category": 'Bluestar/Generic web module',
     'complexity': "easy",
     'description': """
 Warning style for staging/testing install
 =========================================
 
-Flashy look and feel for OpenERP web interface to not mix up your production instance with your staging/testing instance.
+Flashy look and feel for OpenERP web interface to not mix up your production
+instance with your staging/testing instance.
     """,
     'author': 'Bluestar Solutions Sàrl',
     'website': 'http://www.blues2.ch',
@@ -37,7 +38,7 @@ Flashy look and feel for OpenERP web interface to not mix up your production ins
     "css": ['static/src/css/test_warning.css'],
     'auto_install': False,
     'web_preload': False,
-    'images' : ['images/web_test_warning.png',],
+    'images': ['images/web_test_warning.png', ],
 }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
