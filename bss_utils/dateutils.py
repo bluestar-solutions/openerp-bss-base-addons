@@ -20,13 +20,50 @@
 ##############################################################################
 
 from datetime import datetime
+import time
+from openerp.addons.bss_utils.decorator import deprecated  # @UnresolvedImport
+
+ORM_DATE_FORMAT = '%Y-%m-%d'
+ORM_TIME_FORMAT = '%H:%M:%S'
+ORM_DATETIME_FORMAT = '%s %s' % (ORM_DATE_FORMAT, ORM_TIME_FORMAT)
 
 
-def orm_datetime(orm_datetime):
-    return datetime.strptime(orm_datetime, '%Y-%m-%d %H:%M:%S')
+def orm2datetime(value, tformat=ORM_DATETIME_FORMAT):
+    """Return a datetime object from an ORM datetime string value"""
+    return datetime.strptime(value, tformat)
 
 
-def orm_date(orm_date):
-    return datetime.strptime(orm_date, '%Y-%m-%d')
+def orm2date(value, tformat=ORM_DATE_FORMAT):
+    """Return a date object from an ORM date string value"""
+    return datetime.strptime(value, tformat).date()
+
+
+def timestamp(millis=False):
+    """Return current int timestamp (with or without millisecond)"""
+    return int(round(time.time() * (millis and 1000 or 1)))
+
+
+def datetime2timestamp(value, millis=False):
+    """Return an int timestamp from a datetime (with or without millisecond)"""
+    if millis:
+        return int(time.mktime(value.timetuple()))
+    else:
+        return int(round((time.mktime(value.timetuple()) +
+                          value.microsecond / 1E6) * 1000))
+
+
+def timestamp2datetime(value, millis=False):
+    """Return a datetime from a int timestamp (with or without millisecond)"""
+    return datetime.fromtimestamp(value / (millis and 1000. or 1))
+
+
+@deprecated
+def orm_datetime(value):
+    return orm2datetime(value)
+
+
+@deprecated
+def orm_date(value):
+    return orm2datetime(value, tformat=ORM_DATE_FORMAT)
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

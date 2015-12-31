@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2013-2015 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
+#    Copyright (C) 2015 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,29 +19,24 @@
 #
 ##############################################################################
 
-from openerp.addons.bss_utils.decorator import deprecated  # @UnresolvedImport
+from openerp.netsvc import logging
+
+logger = logging.getLogger('deprecated')
 
 
-@deprecated
-def enum(**enums):
-    # TODO: Remove if not used
-    return type('Enum', (), enums)
+def deprecated(func):
+    """A deprecated method decorator.
 
-Direction = enum(FLOOR=-1, NEAR=0, CEIL=1)
-
-
-def round_to(n, precision, direction=Direction.NEAR):
-    correction = 0.0
-    if direction == Direction.NEAR:
-        correction = 0.5 if n >= 0 else -0.5
-    elif direction == Direction.CEIL:
-        if int(n / precision) * precision == n:
-            return n
-        correction = 1.0 if n >= 0 else -1.0
-    return int(n / precision + correction) * precision
-
-
-def round_to_05(n, direction=Direction.NEAR):
-    return round_to(n, 0.05, direction)
+    This is a decorator which can be used to mark functions
+    as deprecated. It will result in a warning being emitted
+    when the function is used.
+    """
+    def new_func(*args, **kwargs):
+        logger.warning("Call to deprecated function %s.", func.__name__)
+        return func(*args, **kwargs)
+    new_func.__name__ = func.__name__
+    new_func.__doc__ = func.__doc__
+    new_func.__dict__.update(func.__dict__)
+    return new_func
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
