@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
-#    
+#
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2013 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
+#    Copyright (C) 2013-2015 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -15,13 +15,19 @@
 #    GNU Affero General Public License for more details.
 #
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.     
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
 
+
 def log_debug_trigger(logger, update_object, ids, trigger_object):
-    logger.debug("Update %(update_object)s%(ids)s triggered by %(trigger_object)s" % {
-        'update_object': update_object,
-        'ids': str(list(ids)),
-        'trigger_object': trigger_object
-    })
+    logger.debug(
+        "Update %(update_object)s%(ids)s triggered by "
+        "%(trigger_object)s" % {
+            'update_object': update_object,
+            'ids': str(list(ids)),
+            'trigger_object': trigger_object
+        }
+    )
+
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
