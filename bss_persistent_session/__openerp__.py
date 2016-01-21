@@ -26,6 +26,11 @@
     'author': 'Daniel Le Gall',
     'summary': 'Never let webserver session expires',
     'description': """
+        OpenERP Python Utilities
+        ========================
+        
+        A set of useful generic Python methods for OpenERP
+        (amountutils, dateutils, ...).
     """,
     'depends': ["base","web"],
     'js': [
