@@ -28,11 +28,11 @@
     'description': """
         OpenERP Python Utilities
         ========================
-        
+
         A set of useful generic Python methods for OpenERP
         (amountutils, dateutils, ...).
     """,
-    'depends': ["base","web"],
+    'depends': ["base", "web"],
     'js': [
         'static/js/call.js',
     ],
