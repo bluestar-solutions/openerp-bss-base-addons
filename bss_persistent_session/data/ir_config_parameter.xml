@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="bss_persistent_session.delay" model="ir.config_parameter">
+            <field name="key">bss_persistent_session.delay</field>
+            <field name="value">90000</field>
+        </record>
+   </data>
+</openerp>
