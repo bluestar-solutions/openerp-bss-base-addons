@@ -21,16 +21,17 @@
 
 {
     'name': 'bss_persistent_session',
-    'version': '7.0.1.1',
+    'version': '7.0.1.0',
     'category': 'Bluestar/Generic module',
     'author': 'Daniel Le Gall',
     'summary': 'Never let webserver session expires',
     'description': """
-        OpenERP Python Utilities
-        ========================
-
-        A set of useful generic Python methods for OpenERP
-        (amountutils, dateutils, ...).
+        This module constantly do RPC requests to retrieve delay between
+        two requests. It prevents the webserver to close the session
+        because of inactivity. The delay between each request is a
+        configuration parameter in ir.config_parameter, configurable
+        via the interface in Configuration > Technical > Parameters >
+        System Parameters
     """,
     'depends': ["base", "web"],
     'js': [
