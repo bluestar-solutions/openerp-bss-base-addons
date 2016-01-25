@@ -22,7 +22,7 @@
 {
     'name': 'bss_persistent_session',
     'version': '7.0.1.0',
-    'category': 'Bluestar/Generic module',
+    'category': 'Bluestar/Generic module',  
     'author': 'Daniel Le Gall',
     'summary': 'Never let webserver session expires',
     'description': """
@@ -31,7 +31,7 @@
         because of inactivity. The delay between each request is a
         configuration parameter in ir.config_parameter, configurable
         via the interface in Configuration > Technical > Parameters >
-        System Parameters
+        System Parameters. Default values for delay is 90000ms.
     """,
     'depends': ["base", "web"],
     'js': [
