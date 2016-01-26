@@ -9,9 +9,9 @@ openerp.bss_persistent_session = function(instance) {
                     clearInterval(sessionback);
                     parentDelay = delay;
                     sessionback = setInterval(sessionCallback, delay);
-                    }
-                }, function(){ clearInterval(sessionback); parentDelay = 90000; });
-            };
-            sessionback = setInterval(sessionCallback,parentDelay);
+                }
+            }, function(){ clearInterval(sessionback); parentDelay = 90000; });
+        };
+        sessionback = setInterval(sessionCallback,parentDelay);
     });
 };
