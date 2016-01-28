@@ -21,7 +21,7 @@
 
 {
     'name': 'Duration widget',
-    'version': '7.0.2.2-20151231',
+    'version': '7.0.2.3-20160128',
     "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """
