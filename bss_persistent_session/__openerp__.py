@@ -20,25 +20,26 @@
 ##############################################################################
 
 {
-    'name': 'Utils',
+    'name': 'bss_persistent_session',
     'version': '7.0.2.3-20160128',
-    "category": 'Bluestar/Generic module',
-    'complexity': "easy",
+    'category': 'Bluestar/Generic module',
+    'author': 'Daniel Le Gall',
+    'summary': 'Never let webserver session expires',
     'description': """
-OpenERP Python Utilities
-========================
-
-A set of useful generic Python methods for OpenERP
-(amountutils, dateutils, ...).
+        This module constantly do RPC requests to retrieve delay between
+        two requests. It prevents the webserver to close the session
+        because of inactivity. The delay between each request is a
+        configuration parameter in ir.config_parameter, configurable
+        via the interface in Configuration > Technical > Parameters >
+        System Parameters. Default value for delay is 90000ms.
     """,
-    'author': 'Bluestar Solutions Sàrl',
-    'website': 'http://www.blues2.ch',
-    'depends': [],
-    'init_xml': [],
-    'update_xml': [],
-    'css': ['static/src/css/style.css'],
-    'demo_xml': [],
-    'test': ['test/test_amountutils.yml'],
+    'depends': ["base", "web"],
+    'js': [
+        'static/js/call.js',
+    ],
+    'data': [
+        'data/ir_config_parameter.xml'
+    ],
     'installable': True,
     'application': False,
     'auto_install': False,

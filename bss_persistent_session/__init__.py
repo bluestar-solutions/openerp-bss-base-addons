@@ -19,29 +19,5 @@
 #
 ##############################################################################
 
-{
-    'name': 'Utils',
-    'version': '7.0.2.3-20160128',
-    "category": 'Bluestar/Generic module',
-    'complexity': "easy",
-    'description': """
-OpenERP Python Utilities
-========================
-
-A set of useful generic Python methods for OpenERP
-(amountutils, dateutils, ...).
-    """,
-    'author': 'Bluestar Solutions Sàrl',
-    'website': 'http://www.blues2.ch',
-    'depends': [],
-    'init_xml': [],
-    'update_xml': [],
-    'css': ['static/src/css/style.css'],
-    'demo_xml': [],
-    'test': ['test/test_amountutils.yml'],
-    'installable': True,
-    'application': False,
-    'auto_install': False,
-}
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
