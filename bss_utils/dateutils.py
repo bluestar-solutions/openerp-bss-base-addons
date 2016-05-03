@@ -28,13 +28,17 @@ ORM_TIME_FORMAT = '%H:%M:%S'
 ORM_DATETIME_FORMAT = '%s %s' % (ORM_DATE_FORMAT, ORM_TIME_FORMAT)
 
 
-def orm2datetime(value, tformat=ORM_DATETIME_FORMAT):
+def orm2datetime(value, tformat=ORM_DATETIME_FORMAT, default=None):
     """Return a datetime object from an ORM datetime string value"""
+    if not value:
+        return default
     return datetime.strptime(value, tformat)
 
 
-def orm2date(value, tformat=ORM_DATE_FORMAT):
+def orm2date(value, tformat=ORM_DATE_FORMAT, default=None):
     """Return a date object from an ORM date string value"""
+    if not value:
+        return default
     return datetime.strptime(value, tformat).date()
 
 
