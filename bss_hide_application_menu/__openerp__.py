@@ -21,7 +21,7 @@
 
 {
     'name': 'Hide Application Menu',
-    'version': 'master',
+    'version': '7.0.2.3-20160509',
     "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """

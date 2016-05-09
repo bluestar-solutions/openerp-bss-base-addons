@@ -21,7 +21,7 @@
 
 {
     'name': 'bss_persistent_session',
-    'version': '7.0.2.3-20160128',
+    'version': '7.0.2.3-20160509',
     'category': 'Bluestar/Generic module',
     'author': 'Daniel Le Gall',
     'summary': 'Never let webserver session expires',
