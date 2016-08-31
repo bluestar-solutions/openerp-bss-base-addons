@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_request_parameter_tree">
+            <field name="name">request.parameter.tree</field>
+            <field name="model">request.parameter</field>
+            <field name="arch" type="xml">
+                <tree editable="top" string="Parameter" version="7.0">
+                    <field name="name" />
+                    <field name="data_type" />
+                    <field name="format" attrs="{'invisible': [('data_type', '!=', 'decimal')]}" />
+                    <field name="selection_id" attrs="{'invisible': [('data_type', '!=', 'selection')], 'required': [('data_type', '=', 'selection')]}" />
+                    <field name="required" attrs="{'invisible': [('data_type', '=', 'boolean')]}" />
+                    <field name="max_length" attrs="{'invisible': [('data_type', '!=', 'text')]}" />
+                    <field name="key" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_request_parameter_filter">
+            <field name="name">request.parameter.search</field>
+            <field name="model">request.parameter</field>
+            <field name="arch" type="xml">
+                <search string="Parameter">
+                    <field name="name" />
+                </search>
+             </field>
+         </record>
+
+         <record model="ir.actions.act_window" id="action_request_parameter">
+             <field name="name">Request Parameters</field>
+             <field name="res_model">request.parameter</field>
+             <field name="view_mode">tree</field>
+             <field name="help" type="html">
+                 <p class="oe_view_nocontent_create">
+                    Click to create a parameter.
+                 </p>
+             </field>
+         </record>
+
+         <menuitem action="action_request_parameter" id="menu_request_parameter"
+                   parent="menu_configuration"
+                   sequence="3"/>
+
+    </data>
+</openerp>

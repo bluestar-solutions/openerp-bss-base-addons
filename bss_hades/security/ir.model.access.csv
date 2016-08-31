@@ -1,0 +1,6 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_bss_hades_request_type_user","bss_hades_request_type user","model_request_type","bss_hades.group_hades_user",1,0,0,0
+"access_bss_hades_request_type_manager","bss_hades_request_type manager","model_request_type","bss_hades.group_hades_manager",1,1,1,1
+,,,,,,,
+"access_bss_hades_request_parameter_user","bss_hades_request_parameter user","model_request_parameter","bss_hades.group_hades_user",1,0,0,0
+"access_bss_hades_request_parameter_manager","bss_hades_request_parameter manager","model_request_parameter","bss_hades.group_hades_manager",1,1,1,1

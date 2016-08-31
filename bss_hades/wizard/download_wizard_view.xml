@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_download_wizard_form" model="ir.ui.view">
+            <field name="name">download.wizard.form</field>
+            <field name="model">download.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Download" version="7.0">
+                    <group>
+                        <field name="generated_file_stream" readonly="1" filename="generated_file_name" attrs="{'invisible':[('generated_file_stream','=',False)]}"/>
+                    </group>
+                    <footer>
+                        <button string="Close" class="oe_highlight" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>

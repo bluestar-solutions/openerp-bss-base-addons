@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="view_request_type_form">
+			<field name="name">request.type.form</field>
+			<field name="model">request.type</field>
+			<field name="arch" type="xml">
+				<form string="Request Type" version="7.0">
+					<header>
+						<button name="exec_request" string="Execute Request" type="object" class="oe_highlight"
+							attrs="{'invisible': [('id','=',False)]}" />
+					</header>
+					<sheet>
+						<field name="id" invisible="1" />
+						<group>
+							<field name="name" />
+						</group>
+						<group string="Request">
+							<field name="request" nolabel="1" />
+						</group>
+						<group string="Parameters">
+							<field name="parameter_ids" nolabel="1">
+								<tree create="0" edit="0">
+									<field name="name" />
+									<field name="data_type" />
+									<field name="required" />
+									<field name="key" />
+								</tree>
+							</field>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<record model="ir.ui.view" id="view_request_type_tree">
+			<field name="name">request.type.tree</field>
+			<field name="model">request.type</field>
+			<field name="arch" type="xml">
+				<tree string="Request Type">
+					<field name="name" />
+				</tree>
+			</field>
+		</record>
+		
+		<record model="ir.actions.act_window" id="action_request_type">
+            <field name="name">Requests</field>
+            <field name="res_model">request.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="action_request_type"
+                    id="menu_request_type"
+                    parent="menu_main_hades"
+                    sequence="0" />
+	</data>
+</openerp>
