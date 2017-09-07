@@ -21,7 +21,7 @@
 
 from datetime import datetime
 import time
-from openerp.addons.bss_utils.decorator import deprecated  # @UnresolvedImport
+from odoo.addons.bss_utils.decorator import deprecated  # @UnresolvedImport
 
 ORM_DATE_FORMAT = '%Y-%m-%d'
 ORM_TIME_FORMAT = '%H:%M:%S'

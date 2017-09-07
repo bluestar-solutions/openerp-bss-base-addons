@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    OpenERP, Open Source Management Solution
+#    *.py, Open Source Management Solution
 #    Copyright (C) 2013-2015 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -19,7 +19,7 @@
 #
 ##############################################################################
 
-from openerp.addons.bss_utils.decorator import deprecated  # @UnresolvedImport
+from odoo.addons.bss_utils.decorator import deprecated  # @UnresolvedImport
 
 
 @deprecated

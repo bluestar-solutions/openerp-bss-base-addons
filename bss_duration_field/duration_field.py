@@ -22,8 +22,9 @@
 from math import floor
 from re import match
 
-from openerp.osv import fields, osv
-from openerp.tools.translate import _
+from odoo import fields, models
+from odoo.osv import osv
+from odoo.tools.translate import _
 
 
 CONVERSIONS = {
@@ -35,7 +36,7 @@ CONVERSIONS = {
 PATTERNS = None
 
 
-class duration(fields.float):
+class duration(fields.Float):
     _type = 'duration'
     _symbol_c = '%s'
 
