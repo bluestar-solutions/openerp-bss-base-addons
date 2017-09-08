@@ -19,7 +19,7 @@
 #
 ##############################################################################
 
-from openerp.netsvc import logging
+from odoo.netsvc import logging
 
 logger = logging.getLogger('deprecated')
 

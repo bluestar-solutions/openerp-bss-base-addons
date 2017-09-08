@@ -19,7 +19,7 @@
 #
 ##############################################################################
 
-from openerp.addons.bss_utils.decorator import deprecated  # @UnresolvedImport
+from odoo.addons.bss_utils.decorator import deprecated  # @UnresolvedImport
 
 
 @deprecated
