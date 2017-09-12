@@ -22,7 +22,7 @@
 from math import floor
 from re import match
 
-from odoo import fields, models
+from odoo import fields
 from odoo.osv import osv
 from odoo.tools.translate import _
 
@@ -84,7 +84,7 @@ class duration(fields.Float):
         return total
 
     def __init__(self, string="unknown", **args):
-        fields.float.__init__(self, string=string, **args)
+        fields.Float.__init__(self, string=string, **args)
 
     def _symbol_get(self, value_to_display):
         days = int(floor(value_to_display))
