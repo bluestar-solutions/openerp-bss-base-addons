@@ -21,7 +21,6 @@
 
 from datetime import datetime
 import time
-from odoo.addons.bss_utils.decorator import deprecated  # @UnresolvedImport
 
 ORM_DATE_FORMAT = '%Y-%m-%d'
 ORM_TIME_FORMAT = '%H:%M:%S'
@@ -60,14 +59,5 @@ def timestamp2datetime(value, millis=False):
     """Return a datetime from a int timestamp (with or without millisecond)"""
     return datetime.fromtimestamp(value / (millis and 1000. or 1))
 
-
-@deprecated
-def orm_datetime(value):
-    return orm2datetime(value)
-
-
-@deprecated
-def orm_date(value):
-    return orm2datetime(value, tformat=ORM_DATE_FORMAT)
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
