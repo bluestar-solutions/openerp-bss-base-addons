@@ -19,18 +19,9 @@
 #
 ##############################################################################
 
-from odoo.addons.bss_utils.decorator import deprecated  # @UnresolvedImport
-
-
-@deprecated
-def log_debug_trigger(logger, update_object, ids, trigger_object):
-    logger.debug(
-        "Update %(update_object)s%(ids)s triggered by "
-        "%(trigger_object)s" % {
-            'update_object': update_object,
-            'ids': str(list(ids)),
-            'trigger_object': trigger_object
-        }
-    )
+import amountutils
+import dateutils
+import decorator
+import logging_template
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
