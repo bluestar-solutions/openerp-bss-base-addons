@@ -19,15 +19,11 @@
 #
 ##############################################################################
 
-from odoo.addons.bss_utils.decorator import deprecated  # @UnresolvedImport
 
-
-@deprecated
-def enum(**enums):
-    # TODO: Remove if not used
-    return type('Enum', (), enums)
-
-Direction = enum(FLOOR=-1, NEAR=0, CEIL=1)
+class Direction():
+    FLOOR = -1
+    NEAR = 0
+    CEIL = 1
 
 
 def round_to(n, precision, direction=Direction.NEAR):
