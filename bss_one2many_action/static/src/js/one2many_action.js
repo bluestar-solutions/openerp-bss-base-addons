@@ -13,8 +13,8 @@ odoo.define('bss_one2many_action.FieldOne2ManyAction', function (require) {
                 do_activate_record: function(index, id) {
                     var context = self.build_context().eval();
                     if (context['on_click_action']) {
-                        this.do_button_action(
-                            context['on_click_action'], id, function (id) {});
+                        this.do_execute_action(
+                                context['on_click_action'], this.dataset, id);
                     }
                 }
             });
