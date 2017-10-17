@@ -19,9 +19,10 @@ odoo.define('bss_one2many_action.FieldOne2ManyAction', function (require) {
                                 if (!_.isObject(reason)) {
                                     self.view.recursive_reload();
                                 }
-                            }).fail(function () {
-                                self.view.recursive_reload();
-                            }));
+                            }
+                        ).fail(function () {
+                            self.view.recursive_reload();
+                        });
                     }
                 }
             });
