@@ -3,7 +3,7 @@
     <data>
         <template id="assets_backend" name="bss_qualified_contacts assets" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
-                <script type="text/javascript" src="/bss_one2many_action/static/src/js/list_view.js"></script>
+                <script type="text/javascript" src="/bss_one2many_action/static/src/js/one2many_action.js"></script>
             </xpath>
         </template>
     </data>

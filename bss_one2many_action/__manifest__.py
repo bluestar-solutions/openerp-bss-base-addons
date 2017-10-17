@@ -39,7 +39,7 @@ If on_click_action is not defined, no action will be called on click.
     'author': 'Bluestar Solutions Sàrl',
     'website': 'http://www.blues2.ch',
     'depends': ['web'],
-    'data': ['views/assets_backend_template.xml'],
+    'data': ['views/assets_backend_templates.xml'],
     'installable': True,
     'application': False,
     'auto_install': False,
