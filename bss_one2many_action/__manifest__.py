@@ -4,7 +4,7 @@
 
 {
     'name': 'One2Many Action Widget',
-    'version': '7.0.2.3-20160509',
+    'version': '10.0.0.1',
     "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """
