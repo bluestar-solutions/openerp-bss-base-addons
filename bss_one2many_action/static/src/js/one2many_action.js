@@ -25,11 +25,13 @@ odoo.define('bss_one2many_action.FieldOne2ManyAction', function (require) {
                     // event is from a one2many_action, otherwise
                     // calling super to not affect other component
                     // if there is many x2m components on the same view.
-                    if (this.x2m.widget == 'one2many_action') {
-                        if (self._actions[this.x2m.name]) {
-                            this.handle_button(
-                                self._actions[this.x2m.name], id,
-                                function () {});
+                    var x2m = this.x2m;
+                    if (x2m.widget == 'one2many_action') {
+                        var name = self._actions[x2m.name];
+                        if (name) {
+                            this.do_button_action(name, id, function () {
+                                x2m.view.reload();
+                            });
                         }
                     } else {
                         this._super(index, id);
