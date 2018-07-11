@@ -27,7 +27,6 @@ odoo.define('bss_one2many_action.FieldOne2ManyAction', function (require) {
                     // if there is many x2m components on the same view.
                     if (this.x2m.widget == 'one2many_action') {
                         if (self._actions[this.x2m.name]) {
-                            console.log(self._actions[this.x2m.name]);
                             this.handle_button(
                                 self._actions[this.x2m.name], id,
                                 function () {});
