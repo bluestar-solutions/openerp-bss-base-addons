@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Jobs Queue.
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <data noupdate="1">
+        <record id="ir_cron_bss_queue_checking" model="ir.cron">
+            <field name="name">Starting Next Queue Job</field>
+            <field name="active" eval="1" />
+            <field name="user_id" ref="base.user_root" />
+            <field name="priority" eval="999" />
+            <field name="interval_number" eval="5" />
+            <field name="interval_type">minutes</field>
+            <field name="numbercall" eval="-1"/>
+            <field name="doall" eval="0"/>
+            <field name="model">bss.queue</field>
+            <field name="function">gnome_checking</field>
+        </record>
+   </data>
+
+    <record id="ir_cron_bss_queue_checking" model="ir.cron">
+        <field name="model">bss.queue</field>
+        <field name="function">gnome_checking</field>
+    </record>
+
+</odoo>

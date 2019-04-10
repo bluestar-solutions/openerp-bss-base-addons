@@ -27,5 +27,3 @@ If on_click_action is not defined, no action will be called on click.
     'application': False,
     'auto_install': False,
 }
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

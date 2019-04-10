@@ -1,3 +1,8 @@
+/**
+ * Part of One2Many Action Widget.
+ * See LICENSE file for full copyright and licensing details.
+ */
+
 
 odoo.define('bss_one2many_action.FieldOne2ManyAction', function (require) {
     "use strict";

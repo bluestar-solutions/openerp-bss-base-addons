@@ -46,6 +46,3 @@ def timestamp2datetime(value, millis=False):
 def get_quarter_start(date_at):
     quarter_month = ((date_at.month - 1) / 3) * 3 + 1
     return date(date_at.year, quarter_month, 1)
-
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
