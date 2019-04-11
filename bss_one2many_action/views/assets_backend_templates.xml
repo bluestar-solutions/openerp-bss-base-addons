@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of One2Many Action Widget.
+    See LICENSE file for full copyright and licensing details.
+-->
 <odoo>
     <data>
         <template id="assets_backend" name="bss_qualified_contacts assets" inherit_id="web.assets_backend">

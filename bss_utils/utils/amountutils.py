@@ -22,5 +22,3 @@ def round_to(n, precision, direction=Direction.NEAR):
 
 def round_to_05(n, direction=Direction.NEAR):
     return round_to(n, 0.05, direction)
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
