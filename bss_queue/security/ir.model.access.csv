@@ -1,0 +1,3 @@
+"id","name","model_id/id","group_id/id","perm_read","perm_write","perm_create","perm_unlink"
+"access_bss_queue","bss_queue group_user","model_bss_queue","base.group_user",1,0,0,0
+"access_bss_queue_step","bss_queue_step group_user","model_bss_queue_step","base.group_user",1,0,0,0

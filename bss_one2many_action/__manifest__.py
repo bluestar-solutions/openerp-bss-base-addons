@@ -4,7 +4,7 @@
 
 {
     'name': 'One2Many Action Widget',
-    'version': '10.0.1.0',
+    'version': '10.0.2.0',
     "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """
@@ -27,5 +27,3 @@ If on_click_action is not defined, no action will be called on click.
     'application': False,
     'auto_install': False,
 }
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

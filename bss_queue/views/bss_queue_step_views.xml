@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Jobs Queue.
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <record id="bss_queue_step_kanban" model="ir.ui.view">
+        <field name="name">bss.queue.step.kanban</field>
+        <field name="model">bss.queue.step</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name"/>
+                <field name="current"/>
+                <field name="total"/>
+                <field name="remaining_time"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="text-center">
+                            <field name="current" widget="gauge"
+                                   options="{'max_field': 'total', 'label_field': 'name'}"/>
+                            <field name="remaining_time" widget="float_time"/> remaining /
+                            <field name="total_time" widget="float_time"/> (estimate)
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+</odoo>

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Python Utilities.
+# Part of Jobs Queue.
 # See LICENSE file for full copyright and licensing details.
 
-import utils
+import models
