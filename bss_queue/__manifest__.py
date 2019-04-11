@@ -1,27 +1,28 @@
 # -*- coding: utf-8 -*-
-# Part of Python Utilities.
+# Part of Jobs Queue.
 # See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Utils',
+    'name': 'Jobs Queue',
     'version': '10.0.2.0',
     "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """
-Python Utilities
-================
+Jobs Queue
+==========
 
-A set of useful generic Python methods for OpenERP
-(amountutils, dateutils, ...).
+A jobs queue system.
     """,
     'author': 'Bluestar Solutions Sàrl',
     'website': 'http://www.blues2.ch',
-    'depends': [],
-    'init_xml': [],
-    'update_xml': [],
-    'css': ['static/src/css/style.css'],
-    'demo_xml': [],
-    'test': ['test/test_amountutils.yml'],
+    'depends': ['web'],
+    'data': [
+        'security/ir.model.access.csv',
+
+        'data/ir_cron_data.xml',
+
+        'views/bss_queue_views.xml',
+        'views/bss_queue_step_views.xml'],
     'installable': True,
     'application': False,
     'auto_install': False,
