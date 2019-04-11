@@ -1,0 +1,228 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* bss_queue
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-11 17:30+0000\n"
+"PO-Revision-Date: 2019-04-11 17:32+0200\n"
+"Last-Translator: Hervé <herve.martinet@blues2.ch>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr_CH\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Pootle 2.5.0\n"
+"X-POOTLE-MTIME: 1555000360.0\n"
+
+#. module: bss_queue
+#: model:ir.ui.view,arch_db:bss_queue.bss_queue_step_kanban
+msgid "(estimate)"
+msgstr "(estimation)"
+
+#. module: bss_queue
+#: model:ir.model,name:bss_queue.model_bss_abstract_queue
+msgid "Abstract Queue"
+msgstr "Queue abstraite"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_args
+msgid "Arguments"
+msgstr "Arguments"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_date_from
+msgid "Date From"
+msgstr "Date de début"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_abstract_queue_display_name
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_display_name
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_step_display_name
+msgid "Display Name"
+msgstr "Nom d’affichage"
+
+#. module: bss_queue
+#: selection:bss.queue,state:0
+msgid "Done"
+msgstr "Fait"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_step_elapsed_time
+msgid "Elapsed Time"
+msgstr "Temps écoulé"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_error_log
+#: model:ir.ui.view,arch_db:bss_queue.bss_queue_view_form
+msgid "Error Log"
+msgstr "Journal d’erreur"
+
+#. module: bss_queue
+#: selection:bss.queue,state:0
+msgid "Failed"
+msgstr "Échoué"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_failed_method
+msgid "Failed Method"
+msgstr "Méthode de traitement d’erreur"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_abstract_queue_id
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_id
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_step_id
+msgid "ID"
+msgstr "Identifiant"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_abstract_queue___last_update
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue___last_update
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_step___last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_method
+msgid "Method"
+msgstr "Méthode"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_model
+msgid "Model"
+msgstr "Modèle"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_name
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_step_name
+msgid "Name"
+msgstr "Nom"
+
+#. module: bss_queue
+#: model:ir.actions.act_window,help:bss_queue.bss_queue_action
+msgid "No data found."
+msgstr "Aucune donnée trouvée."
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_step_position
+msgid "Position"
+msgstr "Position"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_step_current
+#: model:ir.ui.view,arch_db:bss_queue.bss_queue_view_form
+msgid "Progression"
+msgstr "Progression"
+
+#. module: bss_queue
+#: model:ir.model,name:bss_queue.model_bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_abstract_queue_queue_id
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_step_queue_id
+msgid "Queue"
+msgstr "Queue"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_abstract_queue_queue_state
+msgid "Queue State"
+msgstr "État de la queue"
+
+#. module: bss_queue
+#: model:ir.model,name:bss_queue.model_bss_queue_step
+msgid "Queue Step"
+msgstr "Étape de la queue"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_abstract_queue_queue_stop
+msgid "Queue Stop"
+msgstr "Demande d’arrêt de la tâche"
+
+#. module: bss_queue
+#: selection:bss.queue,state:0
+msgid "Queued"
+msgstr "En attente"
+
+#. module: bss_queue
+#: model:ir.actions.act_window,name:bss_queue.bss_queue_action
+#: model:ir.ui.menu,name:bss_queue.bss_queue_menu
+msgid "Queues"
+msgstr "Queues"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_step_remaining_time
+msgid "Remaining Time"
+msgstr "Temps restant"
+
+#. module: bss_queue
+#: selection:bss.queue,state:0
+msgid "Running"
+msgstr "En cours"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_step_start_time
+msgid "Start Time"
+msgstr "Heure de début"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_state
+msgid "State"
+msgstr "État"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_abstract_queue_step_ids
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_step_ids
+msgid "Steps"
+msgstr "Étapes"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_flag_stop
+msgid "Stop"
+msgstr "Stop"
+
+#. module: bss_queue
+#: code:addons/bss_queue/models/bss_queue.py:65
+#, python-format
+msgid "The job is not in queued state."
+msgstr "La tâche n’est pas en attente."
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_step_total
+msgid "Total"
+msgstr "Total"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_step_total_time
+msgid "Total Time"
+msgstr "Temps total"
+
+#. module: bss_queue
+#: model:ir.model.fields,field_description:bss_queue.field_bss_queue_user_id
+msgid "User"
+msgstr "Utilisateur"
+
+#. module: bss_queue
+#: model:ir.ui.view,arch_db:bss_queue.bss_queue_step_kanban
+msgid "remaining /"
+msgstr "restant /"
