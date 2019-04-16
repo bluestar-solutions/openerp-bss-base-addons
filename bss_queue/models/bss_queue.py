@@ -52,7 +52,7 @@ class Queue(models.Model):
     @api.model
     def gnome_checking(self):
         queue = self.search(
-            [('state', '=', 'queued')], order="date_from desc, id desc",
+            [('state', '=', 'queued')], order="date_from asc, id asc",
             limit=1)
         if queue:
             queue.run(queue.id, queue.user_id.id)
