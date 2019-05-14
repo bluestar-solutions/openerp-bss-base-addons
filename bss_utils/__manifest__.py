@@ -4,7 +4,7 @@
 
 {
     'name': 'Utils',
-    'version': '10.0.2.1',
+    'version': '10.0.2.2',
     "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """
