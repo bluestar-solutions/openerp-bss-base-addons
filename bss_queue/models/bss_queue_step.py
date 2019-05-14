@@ -54,7 +54,7 @@ class QueueStep(models.Model):
         # Write every 10 seconds or if on last element
         if (elapsed - self.elapsed_time) * 3600 > 10 or current == self.total:
             elapsed = (time.time() - self.start_time) / 3600
-            total = self.total * elapsed / current
+            total = self.total * elapsed / current if current > 0 else 0
             self.write({
                 'current': current,
                 'total_time': total,
