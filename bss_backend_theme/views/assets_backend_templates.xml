@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of BSS Backend Theme.
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+    <template id="assets_backend" name="bss_backend_theme assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/bss_backend_theme/static/src/css/sidebar.css"/>
+        </xpath>
+    </template>
+</odoo>
