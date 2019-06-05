@@ -4,7 +4,7 @@
 
 {
     'name': 'Jobs Queue',
-    'version': '10.0.2.2',
+    'version': '10.0.2.3',
     "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """
