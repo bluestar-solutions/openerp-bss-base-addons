@@ -4,7 +4,7 @@
 
 {
     'name': 'BSS Backend Theme',
-    'version': '10.0.2.2',
+    'version': '10.0.2.3',
     "category": "Themes/Backend",
     'description': """
 BSS Backend Theme
