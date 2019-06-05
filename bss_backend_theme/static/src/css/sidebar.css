@@ -1,0 +1,24 @@
+/* Part of BSS Backend Theme. */
+/* See LICENSE file for full copyright and licensing details. */
+
+/* Fix the icon size to avoid sidebar menu autoresize on Chrome */
+
+body .app-sidebar-panel {
+   flex: 0 0 auto;
+}
+.app-sidebar-panel .app-sidebar-menuitem {
+   width: 46px;
+}
+
+/* Change sidebar color */
+
+.app-sidebar-panel {
+    background-color: #e0e7ef;
+}
+
+/* Stabilize design balance or sidebar */
+
+.app-sidebar-panel {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
