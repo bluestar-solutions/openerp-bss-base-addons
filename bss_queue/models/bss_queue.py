@@ -11,7 +11,6 @@ from odoo import _, api, fields, models, registry, SUPERUSER_ID
 from odoo.exceptions import UserError
 from odoo.tools.safe_eval import safe_eval
 
-
 service_lock = Lock()
 
 
@@ -70,8 +69,11 @@ class Queue(models.Model):
     def run(self, qid, uid, set_state=True):
         Env, reg = api.Environment, registry(self.env.cr.dbname)
         with Env.manage(), reg.cursor() as crc, reg.cursor() as crj:
-            control_env = Env(crc, SUPERUSER_ID, {})
-            job_env = Env(crj, uid, {})
+            ctx = {
+                'lang': self.env.user.lang or 'en_US',
+                'tz': self.env.user.tz or 'GMT'}
+            control_env = Env(crc, SUPERUSER_ID, ctx)
+            job_env = Env(crj, uid, ctx)
             # Load queue in a dedicated environment, dedicated to update
             # queue and steps states with explicit commits, outside
             # the job transaction.
